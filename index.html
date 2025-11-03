@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Dr. Vitor Brito - Advocacia Especializada" />
+    <meta property="og:description" content="Advocacia especializada em soluções jurídicas personalizadas. Comprometimento, ética e excelência em cada caso." />
+    <meta property="og:image" content="./imagens/logo.png" type="image/png" />
+    <meta property="og:url" content="https://vitorbrito.adv.br" />
+    <meta property="og:type" content="website" />
+    <meta property="og:author" content="Dr. Vitor Brito" />
+    <meta property="og:site_name" content="Dr. Vitor Brito - Advocacia Especializada" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@vitorbrito.adv" />
+    <meta property="twitter:title" content="Dr. Vitor Brito - Advocacia Especializada" />
+    <meta property="twitter:description" content="Advocacia especializada em soluções jurídicas personalizadas. Comprometimento, ética e excelência em cada caso." />
+    <meta property="twitter:image" content="https://mocha-cdn.com/og.png" type="image/png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/imagens/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mocha-cdn.com/apple-touch-icon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dr. Vitor Brito - Advocacia Especializada</title>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo" onclick="scrollToSection('hero')">
+                    <div class="logo-text">
+                        <img src="./imagens/logo.png" alt="VB Logo" class="logo-image">
+                        <div class="logo-details">
+                            VITOR BRITO
+                            <div class="logo-subtitle">
+                                ADVOCACIA ESPECIALIZADA
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <button onclick="scrollToSection('hero')" class="nav-btn">Início</button>
+                    <button onclick="scrollToSection('sobre')" class="nav-btn">Sobre</button>
+                    <button onclick="scrollToSection('areas')" class="nav-btn">Áreas de Atuação</button>
+                    <button onclick="scrollToSection('contato')" class="nav-btn">Contato</button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav hidden">
+                <nav class="mobile-nav-content">
+                    <button onclick="scrollToSection('hero')" class="mobile-nav-btn">Início</button>
+                    <button onclick="scrollToSection('sobre')" class="mobile-nav-btn">Sobre</button>
+                    <button onclick="scrollToSection('areas')" class="mobile-nav-btn">Áreas de Atuação</button>
+                    <button onclick="scrollToSection('contato')" class="mobile-nav-btn">Contato</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg"></div>
+       
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Advocacia Especializada
+                    <br />
+                    <span class="hero-subtitle-1">Promovendo a Justiça e Defendendo seus Direitos</br> com Excelência Jurídica</span>
+                    <br />
+                    
+                </h1>
+
+
+                
+            </div>
+
+            <div class="hero-photo">
+                <div class="hero-photo-placeholder">
+                    <img src="./imagens/logo.png" alt="VB Logo" class="hero-logo-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-indicator-line">
+                <div class="scroll-indicator-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">Dr. Vitor Brito</h2>
+                    <p class="about-oab">OAB/SP 467.010</p>
+
+                    <div class="about-text">
+                        <p>
+                            Com sólida formação jurídica e ampla experiência em diversas áreas do Direito, 
+                            o Dr. Vitor Brito oferece assessoria jurídica especializada e personalizada, 
+                            sempre priorizando os interesses e necessidades específicas de cada cliente.
+                        </p>
+
+                        <p>
+                            Sua atuação é pautada pelos mais altos padrões éticos e profissionais, 
+                            buscando sempre soluções eficazes e estratégicas para os desafios jurídicos 
+                            enfrentados por pessoas físicas e jurídicas.
+                        </p>
+
+                        <p>
+                            A advocacia do Dr. Vitor Brito caracteriza-se pelo atendimento humanizado, 
+                            pela transparência na comunicação e pelo comprometimento total com os 
+                            resultados de cada caso.
+                        </p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Casos Atendidos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <div class="about-photo">
+                        <img src="./imagens/foto_Vitor.jpg" alt="VB Logo" class="about-logo-image">
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="m16 6 4 14-4-7-4 7z"/>
+                                    <path d="M12 6V2H8"/>
+                                    <path d="m8 18-4 4V2h20v20Z"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-text">Ética</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <circle cx="12" cy="8" r="7"/>
+                                    <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-text">Excelência</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="m22 21-2-2"/>
+                                    <path d="m16 16 2-2"/>
+                                    <circle cx="20" cy="12" r="2"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-text">Dedicação</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-text">Confiança</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas Section -->
+    <section id="areas" class="areas-section">
+        <div class="areas-bg"></div>
+        <div class="areas-decorations">
+            <div class="areas-decoration-1"></div>
+            <div class="areas-decoration-2"></div>
+        </div>
+
+        <div class="container">
+            <div class="areas-header">
+                <h2 class="section-title-gold">Áreas de Atuação</h2>
+                <p class="areas-description">
+                    Expertise jurídica abrangente para atender todas as suas necessidades legais
+                </p>
+            </div>
+
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Direito Trabalhista</h3>
+                    <p class="area-description">Defesa dos direitos do trabalhador, ações trabalhistas e consultoria empresarial.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9,22 9,12 15,12 15,22"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Direito Imobiliário</h3>
+                    <p class="area-description">Compra, venda, locação e regularização de imóveis e documentação.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="m22 21-2-2"/>
+                            <path d="m16 16 2-2"/>
+                            <circle cx="20" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Direito de Família</h3>
+                    <p class="area-description">Divórcio, pensão alimentícia, guarda de filhos e questões familiares.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M3 21h18"/>
+                            <path d="M5 21V7l8-4v18"/>
+                            <path d="m14 9 4 4-4 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Direito Empresarial</h3>
+                    <p class="area-description">Constituição de empresas, contratos comerciais e consultoria jurídica.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Direito Civil</h3>
+                    <p class="area-description">Contratos, responsabilidade civil, danos morais e questões patrimoniais.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="m15 12 5-3-5-3v6"/>
+                            <path d="m10 18 5-3v6l-5-3z"/>
+                            <path d="M4 17a4 4 0 0 1 0-10 4 4 0 0 1 0 10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Direito do Consumidor</h3>
+                    <p class="area-description">Defesa dos direitos do consumidor e relações de consumo.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M8 6v6h8V6"/>
+                            <path d="M15 12v6l-3-3-3 3v-6"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Direito de Trânsito</h3>
+                    <p class="area-description">Infrações, multas, CNH cassada e questões relacionadas ao trânsito.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Direito Previdenciário</h3>
+                    <p class="area-description">Aposentadoria, benefícios, auxílios e questões previdenciárias.</p>
+                </div>
+            </div>
+
+            <div class="areas-cta">
+                <p class="areas-cta-text">
+                    Não encontrou sua área de interesse? Entre em contato conosco.
+                </p>
+                <button class="areas-cta-btn" onclick="scrollToSection('contato')">
+                    Fale Conosco
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="contact-description">
+                    Estamos prontos para auxiliá-lo com suas questões jurídicas
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nome Completo *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome completo" required>
+                            <div class="form-error" id="name-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="seu.email@exemplo.com" required>
+                            <div class="form-error" id="email-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefone</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(11) 99999-9999">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensagem *</label>
+                            <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Descreva sua situação ou dúvida jurídica..." required></textarea>
+                            <div class="form-error" id="message-error"></div>
+                        </div>
+
+                        <button type="submit" class="form-submit" id="submit-btn">
+                            <svg class="submit-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                            </svg>
+                            <div class="submit-spinner hidden">
+                                <div class="spinner"></div>
+                            </div>
+                            <span class="submit-text">Enviar Mensagem</span>
+                        </button>
+
+                        <div class="form-success hidden" id="success-message">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                            <span>Mensagem enviada com sucesso! Entraremos em contato em breve.</span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <h3 class="contact-info-title">Informações de Contato</h3>
+
+                        <div class="contact-info-list">
+                            <a href="https://wa.me/5511974348077" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info-details">
+                                    <div class="contact-info-label">WhatsApp</div>
+                                    <div class="contact-info-value">(11) 97434-8077</div>
+                                </div>
+                            </a>
+
+                            <a href="mailto:vitorbritoadvocacia@gmail.com" class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info-details">
+                                    <div class="contact-info-label">E-mail</div>
+                                    <div class="contact-info-value">vitorbritoadvocacia@gmail.com</div>
+                                </div>
+                            </a>
+
+                            <a href="https://instagram.com/vitorbrito.adv" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                        <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info-details">
+                                    <div class="contact-info-label">Instagram</div>
+                                    <div class="contact-info-value">@vitorbrito.adv</div>
+                                </div>
+                            </a>
+
+                            <a href="https://vitorbrito.adv.br" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                                        <path d="M2 12h20"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info-details">
+                                    <div class="contact-info-label">Website</div>
+                                    <div class="contact-info-value">vitorbrito.adv.br</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="contact-info-footer">
+                            <p>
+                                Atendimento personalizado e consultoria jurídica especializada. 
+                                Entre em contato conosco para agendar uma consulta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="localizacao" class="map-section">
+        <div class="container">
+            <div class="map-header">
+                <h2 class="section-title">Nossa Localização</h2>
+                <p class="map-description">
+                    Escritório localizado em São Paulo - SP
+                </p>
+            </div>
+
+            <div class="map-container">
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1974!2d-46.6333094!3d-23.5511095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt!2sbr!4v1699027896543!5m2!1spt!2sbr"
+                        width="100%"
+                        height="400"
+                        style="border: 0"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="map-iframe">
+                    </iframe>
+                    
+                    <div class="map-overlay">
+                        <div class="map-overlay-content">
+                            <div class="map-overlay-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="map-overlay-details">
+                                <h3 class="map-overlay-title">Dr. Vitor Brito</h3>
+                                <p class="map-overlay-subtitle">Advocacia Especializada</p>
+                                <p class="map-overlay-location">São Paulo - SP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-info">
+                    <div class="map-info-item">
+                        <span class="map-info-label">Endereço:</span>
+                        <span class="map-info-value">São Paulo - SP</span>
+                    </div>
+                    <div class="map-info-item">
+                        <span class="map-info-label">Horário:</span>
+                        <span class="map-info-value">Segunda à Sexta, 9h às 18h</span>
+                    </div>
+                    <div class="map-info-item">
+                        <span class="map-info-label">Agendamento:</span>
+                        <span class="map-info-value">(11) 97434-8077</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bg"></div>
+        <div class="footer-decorations">
+            <div class="footer-decoration"></div>
+        </div>
+
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="https://mocha-cdn.com/019a4b1b-4e15-7adb-8ef0-f9f506f1d714/logo.png" alt="VB Logo" class="footer-logo-image">
+                        <div class="footer-logo-details">
+                            <div class="footer-logo-name">VITOR BRITO</div>
+                            <div class="footer-logo-subtitle">ADVOCACIA ESPECIALIZADA</div>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Advocacia especializada em soluções jurídicas personalizadas. 
+                        Comprometimento, ética e excelência em cada caso.
+                    </p>
+                    <p class="footer-oab">OAB/SP 467.010</p>
+                </div>
+
+                <div class="footer-nav">
+                    <h3 class="footer-nav-title">Navegação</h3>
+                    <nav class="footer-nav-list">
+                        <button onclick="scrollToSection('hero')" class="footer-nav-link">Início</button>
+                        <button onclick="scrollToSection('sobre')" class="footer-nav-link">Sobre</button>
+                        <button onclick="scrollToSection('areas')" class="footer-nav-link">Áreas de Atuação</button>
+                        <button onclick="scrollToSection('contato')" class="footer-nav-link">Contato</button>
+                    </nav>
+                </div>
+
+                <div class="footer-contact">
+                    <h3 class="footer-contact-title">Contato</h3>
+                    <div class="footer-contact-list">
+                        <a href="https://wa.me/5511974348077" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <span class="footer-contact-text">(11) 97434-8077</span>
+                        </a>
+
+                        <a href="mailto:vitorbritoadvocacia@gmail.com" class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <span class="footer-contact-text">vitorbritoadvocacia@gmail.com</span>
+                        </a>
+
+                        <a href="https://instagram.com/vitorbrito.adv" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                    <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                            </div>
+                            <span class="footer-contact-text">@vitorbrito.adv</span>
+                        </a>
+
+                        <a href="https://vitorbrito.adv.br" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                                    <path d="M2 12h20"/>
+                                </svg>
+                            </div>
+                            <span class="footer-contact-text">vitorbrito.adv.br</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        © 2025 Dr. Vitor Brito — Todos os direitos reservados.
+                    </p>
+                    <p class="footer-credits">
+                        Desenvolvido com excelência para advocacia especializada.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

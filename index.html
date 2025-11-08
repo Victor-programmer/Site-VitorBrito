@@ -44,7 +44,7 @@
                 <!-- Desktop Navigation -->
                 <nav class="desktop-nav">
                     <button onclick="scrollToSection('hero')" class="nav-btn">Início</button>
-                    <button onclick="scrollToSection('sobre')" class="nav-btn">Sobre</button>
+                    <button onclick="scrollToSection('container')" class="nav-btn">Sobre</button>
                     <button onclick="scrollToSection('areas')" class="nav-btn">Áreas de Atuação</button>
                     <button onclick="scrollToSection('contato')" class="nav-btn">Contato</button>
                 </nav>
@@ -67,7 +67,7 @@
             <div class="mobile-nav hidden">
                 <nav class="mobile-nav-content">
                     <button onclick="scrollToSection('hero')" class="mobile-nav-btn">Início</button>
-                    <button onclick="scrollToSection('sobre')" class="mobile-nav-btn">Sobre</button>
+                    <button onclick="scrollToSection('container')" class="mobile-nav-btn">Sobre</button>
                     <button onclick="scrollToSection('areas')" class="mobile-nav-btn">Áreas de Atuação</button>
                     <button onclick="scrollToSection('contato')" class="mobile-nav-btn">Contato</button>
                 </nav>
@@ -110,7 +110,7 @@
 
     <!-- About Section -->
     <section id="sobre" class="about-section">
-        <div class="container">
+        <div class="container" id="container">
             <div class="about-grid">
                 <div class="about-content">
                     <h2 class="section-title">Dr. Vitor Brito</h2>
@@ -138,11 +138,11 @@
 
                     <div class="about-stats">
                         <div class="stat-item">
-                            <div class="stat-number">10+</div>
+                            <div class="stat-number">+10</div>
                             <div class="stat-label">Anos de Experiência</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">500+</div>
+                            <div class="stat-number">+500</div>
                             <div class="stat-label">Casos Atendidos</div>
                         </div>
                     </div>
@@ -156,11 +156,7 @@
                     <div class="about-highlights">
                         <div class="highlight-item">
                             <div class="highlight-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path d="m16 6 4 14-4-7-4 7z"/>
-                                    <path d="M12 6V2H8"/>
-                                    <path d="m8 18-4 4V2h20v20Z"/>
-                                </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scale-icon lucide-scale"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>    
                             </div>
                             <div class="highlight-text">Ética</div>
                         </div>
@@ -175,13 +171,7 @@
                         </div>
                         <div class="highlight-item">
                             <div class="highlight-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="m22 21-2-2"/>
-                                    <path d="m16 16 2-2"/>
-                                    <circle cx="20" cy="12" r="2"/>
-                                </svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame-icon lucide-flame"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg>
                             </div>
                             <div class="highlight-text">Dedicação</div>
                         </div>
@@ -200,28 +190,25 @@
     </section>
 
     <!-- Practice Areas Section -->
-    <section id="areas" class="areas-section">
+    <section  class="areas-section">
         <div class="areas-bg"></div>
         <div class="areas-decorations">
             <div class="areas-decoration-1"></div>
             <div class="areas-decoration-2"></div>
         </div>
 
-        <div class="container">
+        <div class="container" id="areas">
             <div class="areas-header">
                 <h2 class="section-title-gold">Áreas de Atuação</h2>
                 <p class="areas-description">
                     Expertise jurídica abrangente para atender todas as suas necessidades legais
                 </p>
             </div>
-
+            
             <div class="areas-grid">
                 <div class="area-card">
                     <div class="area-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-business-icon lucide-briefcase-business"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
                     </div>
                     <h3 class="area-title">Direito Trabalhista</h3>
                     <p class="area-description">Defesa dos direitos do trabalhador, ações trabalhistas e consultoria empresarial.</p>
@@ -234,19 +221,13 @@
                             <polyline points="9,22 9,12 15,12 15,22"/>
                         </svg>
                     </div>
-                    <h3 class="area-title">Direito Imobiliário</h3>
-                    <p class="area-description">Compra, venda, locação e regularização de imóveis e documentação.</p>
+                    <h3 class="area-title">Direito Condominial</h3>
+                    <p class="area-description">Gestão, administração, cobrança e regularização de condomínios e normas internas.</p>
                 </div>
 
                 <div class="area-card">
                     <div class="area-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="m22 21-2-2"/>
-                            <path d="m16 16 2-2"/>
-                            <circle cx="20" cy="12" r="2"/>
-                        </svg>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-round-icon lucide-users-round"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></svg>
                     </div>
                     <h3 class="area-title">Direito de Família</h3>
                     <p class="area-description">Divórcio, pensão alimentícia, guarda de filhos e questões familiares.</p>
@@ -254,11 +235,7 @@
 
                 <div class="area-card">
                     <div class="area-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M3 21h18"/>
-                            <path d="M5 21V7l8-4v18"/>
-                            <path d="m14 9 4 4-4 4"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg>
                     </div>
                     <h3 class="area-title">Direito Empresarial</h3>
                     <p class="area-description">Constituição de empresas, contratos comerciais e consultoria jurídica.</p>
@@ -266,10 +243,7 @@
 
                 <div class="area-card">
                     <div class="area-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                            <polyline points="14,2 14,8 20,8"/>
-                        </svg>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-user-icon lucide-book-user"><path d="M15 13a3 3 0 1 0-6 0"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/><circle cx="12" cy="8" r="2"/></svg>
                     </div>
                     <h3 class="area-title">Direito Civil</h3>
                     <p class="area-description">Contratos, responsabilidade civil, danos morais e questões patrimoniais.</p>
@@ -277,11 +251,7 @@
 
                 <div class="area-card">
                     <div class="area-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="m15 12 5-3-5-3v6"/>
-                            <path d="m10 18 5-3v6l-5-3z"/>
-                            <path d="M4 17a4 4 0 0 1 0-10 4 4 0 0 1 0 10z"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handbag-icon lucide-handbag"><path d="M2.048 18.566A2 2 0 0 0 4 21h16a2 2 0 0 0 1.952-2.434l-2-9A2 2 0 0 0 18 8H6a2 2 0 0 0-1.952 1.566z"/><path d="M8 11V6a4 4 0 0 1 8 0v5"/></svg>
                     </div>
                     <h3 class="area-title">Direito do Consumidor</h3>
                     <p class="area-description">Defesa dos direitos do consumidor e relações de consumo.</p>
@@ -289,24 +259,26 @@
 
                 <div class="area-card">
                     <div class="area-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M8 6v6h8V6"/>
-                            <path d="M15 12v6l-3-3-3 3v-6"/>
-                            <path d="M2 12h20"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-plus-icon lucide-clipboard-plus"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 14h6"/><path d="M12 17v-6"/></svg>
                     </div>
-                    <h3 class="area-title">Direito de Trânsito</h3>
-                    <p class="area-description">Infrações, multas, CNH cassada e questões relacionadas ao trânsito.</p>
+                    <h3 class="area-title">Direito Médico</h3>
+                    <p class="area-description">Atuação em responsabilidade médica, erro hospitalar, consentimento e direitos do paciente.</p>
                 </div>
 
                 <div class="area-card">
                     <div class="area-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-user-icon lucide-shield-user"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M6.376 18.91a6 6 0 0 1 11.249.003"/><circle cx="12" cy="11" r="4"/></svg>
                     </div>
                     <h3 class="area-title">Direito Previdenciário</h3>
                     <p class="area-description">Aposentadoria, benefícios, auxílios e questões previdenciárias.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-stethoscope-icon lucide-stethoscope"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
+                    </div>
+                    <h3 class="area-title">Direito Odontológico</h3>
+                    <p class="area-description">Atuação em responsabilidade odontológica, erro clínico, perícia e direitos do paciente.</p>
                 </div>
             </div>
 
@@ -333,49 +305,55 @@
 
             <div class="contact-grid">
                 <div class="contact-form-container">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Nome Completo *</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome completo" required>
-                            <div class="form-error" id="name-error"></div>
-                        </div>
+                    <form id="contact-form" class="contact-form" action="https://formsubmit.co/victorhugosantos2610@gmail.com" method="POST">
+    <div class="form-group">
+        <label for="name" class="form-label">Nome Completo *</label>
+        <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome completo" required>
+        <div class="form-error" id="name-error"></div>
+    </div>
 
-                        <div class="form-group">
-                            <label for="email" class="form-label">E-mail *</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="seu.email@exemplo.com" required>
-                            <div class="form-error" id="email-error"></div>
-                        </div>
+    <div class="form-group">
+        <label for="email" class="form-label">E-mail *</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="seu.email@exemplo.com" required>
+        <div class="form-error" id="email-error"></div>
+    </div>
 
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Telefone</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(11) 99999-9999">
-                        </div>
+    <div class="form-group">
+        <label for="phone" class="form-label">Telefone</label>
+        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(11) 99999-9999">
+    </div>
 
-                        <div class="form-group">
-                            <label for="message" class="form-label">Mensagem *</label>
-                            <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Descreva sua situação ou dúvida jurídica..." required></textarea>
-                            <div class="form-error" id="message-error"></div>
-                        </div>
+    <div class="form-group">
+        <label for="message" class="form-label">Mensagem *</label>
+        <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Descreva sua situação ou dúvida jurídica..." required></textarea>
+        <div class="form-error" id="message-error"></div>
+    </div>
 
-                        <button type="submit" class="form-submit" id="submit-btn">
-                            <svg class="submit-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <line x1="22" y1="2" x2="11" y2="13"></line>
-                                <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
-                            </svg>
-                            <div class="submit-spinner hidden">
-                                <div class="spinner"></div>
-                            </div>
-                            <span class="submit-text">Enviar Mensagem</span>
-                        </button>
+    <button type="submit" class="form-submit" id="submit-btn">
+        <svg class="submit-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+        </svg>
+        <div class="submit-spinner hidden">
+            <div class="spinner"></div>
+        </div>
+        <span class="submit-text">Enviar Mensagem</span>
+    </button>
 
-                        <div class="form-success hidden" id="success-message">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22,4 12,14.01 9,11.01"/>
-                            </svg>
-                            <span>Mensagem enviada com sucesso! Entraremos em contato em breve.</span>
-                        </div>
-                    </form>
+    <div class="form-success hidden" id="success-message">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22,4 12,14.01 9,11.01"/>
+        </svg>
+        <span>Mensagem enviada com sucesso! Entraremos em contato em breve.</span>
+    </div>
+
+    <!-- Configurações do FormSubmit -->
+    <input type="hidden" name="_subject" value="Novo contato pelo site de advocacia">
+    <input type="hidden" name="_captcha" value="false">
+   
+</form>
+
                 </div>
 
                 <div class="contact-info">
@@ -462,7 +440,7 @@
             <div class="map-container">
                 <div class="map-wrapper">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2659651926073!2d-46.84993852547639!3d-23.520366560287325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03f78a3aab5f%3A0x736c7f1a8e8701ad!2sAlameda%20Graja%C3%BA%2C%20614%20-%20Alphaville%20Industrial%2C%20Barueri%20-%20SP%2C%2006454-050!5e0!3m2!1spt-BR!2sbr!4v1730656600000!5m2!1spt-BR!2sbr"
+                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2659651926073!2d-46.84993852547639!3d-23.520366560287325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03f78a3aab5f%3A0x736c7f1a8e8701ad!2sAlameda%20Graja%C3%BA%2C%20614%20-%20Alphaville%20Industrial%2C%20Barueri%20-%20SP%2C%2006454-050!5e0!3m2!1spt-BR!2sbr!4v1730656600000!5m2!1spt-BR!2sbr"
                         width="100%"
                         height="400"
                         style="border: 0"
@@ -591,7 +569,7 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <p class="footer-copyright">
-                        © 2025 Dr. Vitor Brito — Todos os direitos reservados.
+                        © 2025 Dr. Vitor Brito — Site desenvolvido por <a href="https://github.com/Victor-programmer"  style="text-decoration: none; color: gray;">Victor Programmer</a>.
                     </p>
                     <p class="footer-credits">
                         Desenvolvido com excelência para advocacia especializada.
@@ -611,4 +589,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

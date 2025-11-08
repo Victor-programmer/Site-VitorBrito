@@ -41,7 +41,7 @@ body {
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cinzel', serif;
     font-size: 2.5rem;
     font-weight: 700;
     color: #0A1A2F;
@@ -50,7 +50,7 @@ body {
 }
 
 .section-title-gold {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cinzel', serif;
     font-size: 2.5rem;
     font-weight: 700;
     color: #C8A45D;
@@ -89,7 +89,7 @@ body {
 @keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateX(-30px);
+        transform: translateX(-100px);
     }
     to {
         opacity: 1;
@@ -100,7 +100,7 @@ body {
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateX(100px);
     }
     to {
         opacity: 1;
@@ -136,15 +136,15 @@ body {
 }
 
 .fade-in-up {
-    animation: fadeInUp 1s ease-out forwards;
+    animation: fadeInUp 1.5s ease-out forwards;
 }
 
 .slide-in-left {
-    animation: slideInLeft 1s ease-out forwards;
+    animation: slideInLeft 2s ease-out forwards;
 }
 
 .slide-in-right {
-    animation: slideInRight 1s ease-out forwards;
+    animation: slideInRight 2s ease-out forwards;
 }
 
 /* Header */
@@ -503,7 +503,7 @@ body {
 }
 
 .hero-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cinzel', serif;
     font-size: 2rem;
     font-weight: 700;
     color: #C8A45D;
@@ -560,9 +560,10 @@ body {
 .hero-photo {
     margin-top: 3rem;
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out 0.5s forwards;
+    transform: translateY(30px);
+    animation: fadeInUp 1.6s ease-out 0.5s forwards;
 }
+
 .hero-photo-placeholder {
     width: 15rem;
     height: 15rem;
@@ -719,7 +720,7 @@ body {
 }
 
 .about-content.visible {
-    animation: slideInLeft 1s ease-out forwards;
+    animation: slideInLeft 2s ease-out forwards;
 }
 
 .about-content .section-title {
@@ -772,7 +773,7 @@ body {
 }
 
 .about-image.visible {
-    animation: slideInRight 1s ease-out 0.3s forwards;
+    animation: slideInRight 2s ease-out 0.3s forwards;
 }
 
 .about-photo {
@@ -883,9 +884,7 @@ body {
     transform: translateY(0);
 }
 
-.areas-header.visible {
-    animation: fadeInUp 1s ease-out forwards;
-}
+
 
 .areas-description {
     font-size: 1.25rem;
@@ -908,7 +907,7 @@ body {
 
 @media (min-width: 1024px) {
     .areas-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -923,7 +922,7 @@ body {
 }
 
 .area-card.visible {
-    animation: fadeInUp 0.7s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .area-card:hover {
@@ -935,6 +934,7 @@ body {
 .area-icon {
     color: #C8A45D;
     margin-bottom: 1rem;
+    margin: 0;
 }
 
 .area-title {
@@ -957,9 +957,6 @@ body {
     transform: translateY(0);
 }
 
-.areas-cta.visible {
-    animation: fadeInUp 1s ease-out 1s forwards;
-}
 
 .areas-cta-text {
     font-size: 1.125rem;
@@ -998,9 +995,7 @@ body {
     transform: translateY(0);
 }
 
-.contact-header.visible {
-    animation: fadeInUp 1s ease-out forwards;
-}
+
 
 .contact-description {
     font-size: 1.25rem;
@@ -1026,7 +1021,7 @@ body {
 }
 
 .contact-form-container.visible {
-    animation: slideInLeft 1s ease-out 0.3s forwards;
+    animation: slideInLeft 2s ease-out 0.3s forwards;
 }
 
 .contact-form {
@@ -1142,7 +1137,7 @@ body {
 }
 
 .contact-info.visible {
-    animation: slideInRight 1s ease-out 0.5s forwards;
+    animation: slideInRight 2s ease-out 0.5s forwards;
 }
 
 .contact-info-card {
@@ -1221,7 +1216,7 @@ body {
 /* Map Section */
 .map-section {
     padding: 5rem 0;
-    background: #f9fafb;
+    background: #f5f3f3;
 }
 
 .map-header {
@@ -1231,9 +1226,7 @@ body {
     transform: translateY(0);
 }
 
-.map-header.visible {
-    animation: fadeInUp 1s ease-out forwards;
-}
+
 
 .map-description {
     font-size: 1.25rem;
@@ -1245,10 +1238,6 @@ body {
     transform: scale(1);
 }
 
-.map-container.visible {
-    animation: fadeIn 1s ease-out 0.3s forwards;
-    animation-fill-mode: forwards;
-}
 
 .map-wrapper {
     background: #0A1A2F;
@@ -1403,12 +1392,14 @@ body {
 }
 
 .footer-logo-name {
+    font-family: 'Cinzel', serif;
     color: #C8A45D;
     font-weight: 600;
     font-size: 1.125rem;
 }
 
 .footer-logo-subtitle {
+    font-family: 'Cinzel', serif;
     color: rgba(200, 164, 93, 0.8);
     font-size: 0.75rem;
     letter-spacing: 0.05em;
@@ -1565,7 +1556,7 @@ body {
         font-size: 2rem;
     }
     .hero-subtitle-1{
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
     .section-title,
     .section-title-gold {

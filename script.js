@@ -212,47 +212,36 @@ function initializeForm() {
 // Handle form submission
 async function handleFormSubmit(event) {
     event.preventDefault();
-    
+
     const form = event.target;
     const submitBtn = document.getElementById('submit-btn');
     const successMessage = document.getElementById('success-message');
-    const submitIcon = document.querySelector('.submit-icon');
-    const submitSpinner = document.querySelector('.submit-spinner');
-    const submitText = document.querySelector('.submit-text');
-    
-    // Get form data
-    const formData = {
-        name: form.name.value.trim(),
-        email: form.email.value.trim(),
-        phone: form.phone.value.trim(),
-        message: form.message.value.trim()
-    };
-    
-    // Validate form
-    if (!validateForm(formData)) {
-        return;
-    }
-    
-    // Show loading state
+
+    const formData = new FormData(form);
+
     setFormLoadingState(true);
-    
+
     try {
-        // Simulate form submission (replace with actual API call)
-        await simulateFormSubmission(formData);
-        
-        // Show success state
-        showFormSuccess();
-        
-        // Reset form
-        form.reset();
-        
+        // Envia o formulário direto para o FormSubmit
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData
+        });
+
+        if (response.ok) {
+            showFormSuccess();
+            form.reset();
+        } else {
+            showFormError('Erro ao enviar a mensagem. Tente novamente.');
+        }
     } catch (error) {
-        console.error('Form submission error:', error);
-        showFormError('Erro ao enviar mensagem. Tente novamente.');
+        console.error('Erro:', error);
+        showFormError('Erro ao enviar a mensagem. Tente novamente.');
     } finally {
         setFormLoadingState(false);
     }
 }
+
 
 // Form validation
 function validateForm(data) {

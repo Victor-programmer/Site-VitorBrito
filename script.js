@@ -211,36 +211,45 @@ function initializeForm() {
 
 // Handle form submission
 async function handleFormSubmit(event) {
-    event.preventDefault();
+    event.preventDefault(); // Impede o envio padrão do formulário
 
     const form = event.target;
-    const submitBtn = document.getElementById('submit-btn');
-    const successMessage = document.getElementById('success-message');
+    const formData = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim()
+    };
 
-    const formData = new FormData(form);
+    // Validação antes de enviar
+    if (!validateForm(formData)) return;
 
     setFormLoadingState(true);
 
     try {
-        // Envia o formulário direto para o FormSubmit
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData
+        // 🔥 Envia os dados para o FormSubmit
+        const response = await fetch("https://formsubmit.co/vitorbritoadvocacia@gmail.com", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(formData)
         });
 
         if (response.ok) {
             showFormSuccess();
-            form.reset();
+            form.reset(); // limpa os campos
         } else {
-            showFormError('Erro ao enviar a mensagem. Tente novamente.');
+            throw new Error("Erro ao enviar formulário. Tente novamente mais tarde.");
         }
     } catch (error) {
-        console.error('Erro:', error);
-        showFormError('Erro ao enviar a mensagem. Tente novamente.');
+        showFormError(error.message);
+        console.error("Erro ao enviar:", error);
     } finally {
         setFormLoadingState(false);
     }
 }
+
 
 
 // Form validation
@@ -589,3 +598,5 @@ function initializePerformanceMonitoring() {
 
 // Initialize performance monitoring
 initializePerformanceMonitoring();
+document.addEventListener('DOMContentLoaded', initializeForm);
+

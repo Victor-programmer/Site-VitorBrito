@@ -210,36 +210,21 @@ function initializeForm() {
 }
 
 // Handle form submission
-async function handleFormSubmit(event) {
+function handleFormSubmit(event) {
     event.preventDefault();
+    // ... validação ...
 
-    const form = event.target;
-    const submitBtn = document.getElementById('submit-btn');
-    const successMessage = document.getElementById('success-message');
-
-    const formData = new FormData(form);
-
-    setFormLoadingState(true);
-
-    try {
-        // Envia o formulário direto para o FormSubmit
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData
-        });
-
-        if (response.ok) {
-            showFormSuccess();
-            form.reset();
-        } else {
-            showFormError('Erro ao enviar a mensagem. Tente novamente.');
-        }
-    } catch (error) {
-        console.error('Erro:', error);
-        showFormError('Erro ao enviar a mensagem. Tente novamente.');
-    } finally {
+    // SIMULA o envio primeiro
+    setTimeout(() => {
+        showFormSuccess(); // Feedback ANTES do envio
+        form.reset();
         setFormLoadingState(false);
-    }
+        
+        // Envia DEPOIS do feedback
+        setTimeout(() => {
+            form.submit();
+        }, 2000);
+    }, 1500);
 }
 
 
@@ -589,3 +574,4 @@ function initializePerformanceMonitoring() {
 
 // Initialize performance monitoring
 initializePerformanceMonitoring();
+

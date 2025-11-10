@@ -210,13 +210,11 @@ function initializeForm() {
 }
 
 // Handle form submission
-// Handle form submission - Versão corrigida
+// Handle form submission - Versão super simples e funcional
 function handleFormSubmit(event) {
     event.preventDefault();
 
-    const form = event.target; // DEFININDO A VARIÁVEL FORM
-    const submitBtn = document.getElementById('submit-btn');
-    const successMessage = document.getElementById('success-message');
+    const form = event.target;
 
     // Validação básica
     if (!validateForm(form)) {
@@ -225,48 +223,27 @@ function handleFormSubmit(event) {
 
     setFormLoadingState(true);
 
-    // Simula o envio (funciona mesmo sem JavaScript)
+    // Simula processamento
     setTimeout(() => {
+        // Mostra sucesso
         showFormSuccess();
         
-        // Envia o formulário tradicionalmente após mostrar feedback
+        // Limpa o formulário
+        form.reset();
+        
+        // Remove loading state
+        setFormLoadingState(false);
+        
+        // Envia o formulário de verdade (isso vai redirecionar para o FormSubmit)
         setTimeout(() => {
-            // Cria um formulário temporário para enviar
-            const tempForm = document.createElement('form');
-            tempForm.action = 'https://formsubmit.co/victorhugosantos2610@gmail.com';
-            tempForm.method = 'POST';
-            tempForm.style.display = 'none';
-            
-            // Adiciona os dados do formulário
-            const formData = new FormData(form);
-            for (let [key, value] of formData.entries()) {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = key;
-                input.value = value;
-                tempForm.appendChild(input);
-            }
-            
-            // Adiciona campos hidden do FormSubmit
-            const hiddenFields = [
-                { name: '_captcha', value: 'false' },
-                { name: '_subject', value: 'NOVO CONTATO - vitorbritoadvocacia.com.br' },
-                { name: '_template', value: 'table' }
-            ];
-            
-            hiddenFields.forEach(field => {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = field.name;
-                input.value = field.value;
-                tempForm.appendChild(input);
-            });
-            
-            document.body.appendChild(tempForm);
-            tempForm.submit();
-            document.body.removeChild(tempForm);
-            
-        }, 1000);
+            // Remove o event listener temporariamente para evitar loop
+            form.removeEventListener('submit', handleFormSubmit);
+            form.submit();
+            // Readiciona o event listener após o envio
+            setTimeout(() => {
+                form.addEventListener('submit', handleFormSubmit);
+            }, 1000);
+        }, 2000);
         
     }, 1500);
 }
@@ -621,6 +598,7 @@ function initializePerformanceMonitoring() {
 
 // Initialize performance monitoring
 initializePerformanceMonitoring();
+
 
 
 

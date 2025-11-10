@@ -234,7 +234,7 @@ async function handleFormSubmit(event) {
         formBody.append("_next", "https://victor-programmer.github.io/Site-VitorBrito/#success-message");
 
         // Usando fetch sem JSON, para evitar bloqueio CORS
-        const response = await fetch("https://formsubmit.co/vitorbritoadvocacia@gmail.com", {
+        const response = await fetch("https://formsubmit.co/victorhugosantos2610@gmail.com", {
             method: "POST",
             body: formBody
         });
@@ -603,6 +603,7 @@ function initializePerformanceMonitoring() {
 // Initialize performance monitoring
 initializePerformanceMonitoring();
 document.addEventListener('DOMContentLoaded', initializeForm);
+
 
 
 

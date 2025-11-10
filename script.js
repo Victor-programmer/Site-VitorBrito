@@ -211,7 +211,7 @@ function initializeForm() {
 
 // Handle form submission
 async function handleFormSubmit(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault(); // impede o envio padrão
 
     const form = event.target;
     const formData = {
@@ -220,35 +220,39 @@ async function handleFormSubmit(event) {
         message: form.message.value.trim()
     };
 
-    // Validação antes de enviar
+    // Validação antes do envio
     if (!validateForm(formData)) return;
 
     setFormLoadingState(true);
 
     try {
-        // 🔥 Envia os dados para o FormSubmit
+        // 🔥 Envia os dados usando FormSubmit com método padrão HTML via POST
+        const formBody = new FormData(form);
+        formBody.append("_captcha", "false");
+        formBody.append("_template", "table");
+        formBody.append("_subject", "Novo contato via site");
+        formBody.append("_next", "https://victor-programmer.github.io/#success-message");
+
+        // Usando fetch sem JSON, para evitar bloqueio CORS
         const response = await fetch("https://formsubmit.co/vitorbritoadvocacia@gmail.com", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify(formData)
+            body: formBody
         });
 
         if (response.ok) {
             showFormSuccess();
-            form.reset(); // limpa os campos
+            form.reset();
         } else {
-            throw new Error("Erro ao enviar formulário. Tente novamente mais tarde.");
+            throw new Error("Erro ao enviar o formulário. Tente novamente mais tarde.");
         }
     } catch (error) {
-        showFormError(error.message);
         console.error("Erro ao enviar:", error);
+        showFormError("Não foi possível enviar sua mensagem. Tente novamente mais tarde.");
     } finally {
         setFormLoadingState(false);
     }
 }
+
 
 
 
@@ -599,4 +603,5 @@ function initializePerformanceMonitoring() {
 // Initialize performance monitoring
 initializePerformanceMonitoring();
 document.addEventListener('DOMContentLoaded', initializeForm);
+
 

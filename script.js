@@ -210,21 +210,24 @@ function initializeForm() {
 }
 
 // Handle form submission
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
     event.preventDefault();
     // ... validação ...
 
-    // SIMULA o envio primeiro
-    setTimeout(() => {
-        showFormSuccess(); // Feedback ANTES do envio
-        form.reset();
-        setFormLoadingState(false);
+    try {
+        const formData = new FormData(form);
+        form.submit(); // ENVIO IMEDIATO
         
-        // Envia DEPOIS do feedback
+        // Feedback APÓS o envio
         setTimeout(() => {
-            form.submit();
-        }, 2000);
-    }, 1500);
+            showFormSuccess();
+            form.reset();
+            setFormLoadingState(false);
+        }, 1000);
+        
+    } catch (error) {
+        // Tratamento de erro
+    }
 }
 
 
@@ -574,4 +577,5 @@ function initializePerformanceMonitoring() {
 
 // Initialize performance monitoring
 initializePerformanceMonitoring();
+
 

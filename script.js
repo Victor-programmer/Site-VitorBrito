@@ -210,51 +210,95 @@ function initializeForm() {
 }
 
 // Handle form submission
-async function handleFormSubmit(event) {
+// Handle form submission - Versão corrigida
+function handleFormSubmit(event) {
     event.preventDefault();
-    // ... validação ...
 
-    try {
-        const formData = new FormData(form);
-        form.submit(); // ENVIO IMEDIATO
+    const form = event.target; // DEFININDO A VARIÁVEL FORM
+    const submitBtn = document.getElementById('submit-btn');
+    const successMessage = document.getElementById('success-message');
+
+    // Validação básica
+    if (!validateForm(form)) {
+        return;
+    }
+
+    setFormLoadingState(true);
+
+    // Simula o envio (funciona mesmo sem JavaScript)
+    setTimeout(() => {
+        showFormSuccess();
         
-        // Feedback APÓS o envio
+        // Envia o formulário tradicionalmente após mostrar feedback
         setTimeout(() => {
-            showFormSuccess();
-            form.reset();
-            setFormLoadingState(false);
+            // Cria um formulário temporário para enviar
+            const tempForm = document.createElement('form');
+            tempForm.action = 'https://formsubmit.co/victorhugosantos2610@gmail.com';
+            tempForm.method = 'POST';
+            tempForm.style.display = 'none';
+            
+            // Adiciona os dados do formulário
+            const formData = new FormData(form);
+            for (let [key, value] of formData.entries()) {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = value;
+                tempForm.appendChild(input);
+            }
+            
+            // Adiciona campos hidden do FormSubmit
+            const hiddenFields = [
+                { name: '_captcha', value: 'false' },
+                { name: '_subject', value: 'NOVO CONTATO - vitorbritoadvocacia.com.br' },
+                { name: '_template', value: 'table' }
+            ];
+            
+            hiddenFields.forEach(field => {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = field.name;
+                input.value = field.value;
+                tempForm.appendChild(input);
+            });
+            
+            document.body.appendChild(tempForm);
+            tempForm.submit();
+            document.body.removeChild(tempForm);
+            
         }, 1000);
         
-    } catch (error) {
-        // Tratamento de erro
-    }
+    }, 1500);
 }
 
-
 // Form validation
-function validateForm(data) {
+// Função de validação simplificada
+function validateForm(form) {
     let isValid = true;
     
     // Clear previous errors
     clearAllErrors();
     
     // Name validation
-    if (!data.name) {
+    const name = form.querySelector('[name="name"]');
+    if (!name.value.trim()) {
         showFieldError('name', 'Nome é obrigatório');
         isValid = false;
     }
     
     // Email validation
-    if (!data.email) {
+    const email = form.querySelector('[name="email"]');
+    if (!email.value.trim()) {
         showFieldError('email', 'E-mail é obrigatório');
         isValid = false;
-    } else if (!isValidEmail(data.email)) {
+    } else if (!isValidEmail(email.value)) {
         showFieldError('email', 'E-mail inválido');
         isValid = false;
     }
     
     // Message validation
-    if (!data.message) {
+    const message = form.querySelector('[name="message"]');
+    if (!message.value.trim()) {
         showFieldError('message', 'Mensagem é obrigatória');
         isValid = false;
     }
@@ -577,5 +621,6 @@ function initializePerformanceMonitoring() {
 
 // Initialize performance monitoring
 initializePerformanceMonitoring();
+
 
 

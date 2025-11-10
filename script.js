@@ -210,11 +210,13 @@ function initializeForm() {
 }
 
 // Handle form submission
-// Handle form submission - Versão super simples e funcional
-function handleFormSubmit(event) {
+// Handle form submission com EmailJS
+async function handleFormSubmit(event) {
     event.preventDefault();
 
     const form = event.target;
+    const submitBtn = document.getElementById('submit-btn');
+    const successMessage = document.getElementById('success-message');
 
     // Validação básica
     if (!validateForm(form)) {
@@ -223,29 +225,34 @@ function handleFormSubmit(event) {
 
     setFormLoadingState(true);
 
-    // Simula processamento
-    setTimeout(() => {
-        // Mostra sucesso
+    try {
+        // Prepara os dados para envio
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value || 'Não informado',
+            message: form.message.value,
+            subject: 'Novo Contato - Site Advocacia',
+            date: new Date().toLocaleString('pt-BR')
+        };
+
+        // Envia o email usando EmailJS
+        const response = await emailjs.send(
+            'service_rsabdjc',      // ← Substitua pelo seu Service ID
+            'template_06vvokt',     // ← Substitua pelo seu Template ID  
+            formData
+        );
+
+        // Sucesso
         showFormSuccess();
-        
-        // Limpa o formulário
         form.reset();
-        
-        // Remove loading state
         setFormLoadingState(false);
-        
-        // Envia o formulário de verdade (isso vai redirecionar para o FormSubmit)
-        setTimeout(() => {
-            // Remove o event listener temporariamente para evitar loop
-            form.removeEventListener('submit', handleFormSubmit);
-            form.submit();
-            // Readiciona o event listener após o envio
-            setTimeout(() => {
-                form.addEventListener('submit', handleFormSubmit);
-            }, 1000);
-        }, 2000);
-        
-    }, 1500);
+
+    } catch (error) {
+        console.error('Erro ao enviar email:', error);
+        showFormError('Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente pelo WhatsApp.');
+        setFormLoadingState(false);
+    }
 }
 
 // Form validation
@@ -598,6 +605,7 @@ function initializePerformanceMonitoring() {
 
 // Initialize performance monitoring
 initializePerformanceMonitoring();
+
 
 
 

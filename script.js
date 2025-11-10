@@ -231,7 +231,7 @@ async function handleFormSubmit(event) {
         formBody.append("_captcha", "false");
         formBody.append("_template", "table");
         formBody.append("_subject", "Novo contato via site");
-        formBody.append("_next", "https://victor-programmer.github.io/#success-message");
+        formBody.append("_next", "https://victor-programmer.github.io/Site-VitorBrito/#success-message");
 
         // Usando fetch sem JSON, para evitar bloqueio CORS
         const response = await fetch("https://formsubmit.co/vitorbritoadvocacia@gmail.com", {
@@ -603,5 +603,6 @@ function initializePerformanceMonitoring() {
 // Initialize performance monitoring
 initializePerformanceMonitoring();
 document.addEventListener('DOMContentLoaded', initializeForm);
+
 
 

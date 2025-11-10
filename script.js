@@ -211,49 +211,36 @@ function initializeForm() {
 
 // Handle form submission
 async function handleFormSubmit(event) {
-    event.preventDefault(); // impede o envio padrão
+    event.preventDefault();
 
     const form = event.target;
-    const formData = {
-        name: form.name.value.trim(),
-        email: form.email.value.trim(),
-        message: form.message.value.trim()
-    };
+    const submitBtn = document.getElementById('submit-btn');
+    const successMessage = document.getElementById('success-message');
 
-    // Validação antes do envio
-    if (!validateForm(formData)) return;
+    const formData = new FormData(form);
 
     setFormLoadingState(true);
 
     try {
-        // 🔥 Envia os dados usando FormSubmit com método padrão HTML via POST
-        const formBody = new FormData(form);
-        formBody.append("_captcha", "false");
-        formBody.append("_template", "table");
-        formBody.append("_subject", "Novo contato via site");
-        formBody.append("_next", "https://victor-programmer.github.io/Site-VitorBrito/#success-message");
-
-        // Usando fetch sem JSON, para evitar bloqueio CORS
-        const response = await fetch("https://formsubmit.co/victorhugosantos2610@gmail.com", {
-            method: "POST",
-            body: formBody
+        // Envia o formulário direto para o FormSubmit
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData
         });
 
         if (response.ok) {
             showFormSuccess();
             form.reset();
         } else {
-            throw new Error("Erro ao enviar o formulário. Tente novamente mais tarde.");
+            showFormError('Erro ao enviar a mensagem. Tente novamente.');
         }
     } catch (error) {
-        console.error("Erro ao enviar:", error);
-        showFormError("Não foi possível enviar sua mensagem. Tente novamente mais tarde.");
+        console.error('Erro:', error);
+        showFormError('Erro ao enviar a mensagem. Tente novamente.');
     } finally {
         setFormLoadingState(false);
     }
 }
-
-
 
 
 // Form validation
@@ -602,8 +589,3 @@ function initializePerformanceMonitoring() {
 
 // Initialize performance monitoring
 initializePerformanceMonitoring();
-document.addEventListener('DOMContentLoaded', initializeForm);
-
-
-
-

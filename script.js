@@ -238,7 +238,7 @@ async function handleFormSubmit(event) {
 
         // Envia o email usando EmailJS
         const response = await emailjs.send(
-            'service_rsabdjc',      // ← Substitua pelo seu Service ID
+            'service_b4z92fh',      // ← Substitua pelo seu Service ID
             'template_06vvokt',     // ← Substitua pelo seu Template ID  
             formData
         );
@@ -605,6 +605,7 @@ function initializePerformanceMonitoring() {
 
 // Initialize performance monitoring
 initializePerformanceMonitoring();
+
 
 
 
